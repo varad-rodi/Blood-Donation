@@ -401,7 +401,7 @@ function Hospitals() {
 
     return (
         <div className="min-h-screen bg-white text-gray-900">
-            <main className="flex gap-7 bg-[#fafafa] p-4 lg:p-7">
+            <main className="flex gap-7 bg-[#fafafa] p-4 lg:p-7 mt-20">
                 {/* ================= SIDEBAR ================= */}
                 <aside className="hidden w-[255px] shrink-0 rounded-lg border border-gray-200 bg-white p-4 shadow-sm lg:block">
                     <div className="flex gap-3 border-b border-gray-200 pb-5">
@@ -460,36 +460,7 @@ function Hospitals() {
                 </section>
             </main>
 
-            {/* ================= FOOTER ================= */}
-            <footer className="border-t border-gray-200 bg-white px-8 py-7 lg:px-20">
-                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
-                    <div>
-                        <div className="flex items-center gap-2">
-                            <div className="flex h-9 w-7 items-center justify-center bg-red-600 text-white font-bold">
-                                ♥
-                            </div>
-                            <div>
-                                <h3 className="text-base font-bold">
-                                    Blood<span>Connect</span>
-                                </h3>
-                                <p className="text-[8px]">Save Blood. Save Lives.</p>
-                            </div>
-                        </div>
-                        <p className="mt-3 max-w-[220px] text-[9px] leading-5 text-gray-600">
-                            A platform that connects blood donors with patients and hospitals in real-time during emergencies.
-                        </p>
-                    </div>
-
-                    <FooterColumn title="Quick Links" items={["Home", "Find Donors", "Request Blood", "For Hospitals", "About Us", "Contact Us"]} />
-                    <FooterColumn title="For Donors" items={["Donor Dashboard", "Donation History", "Eligibility", "Donor Guidelines", "Become a Donor"]} />
-                    <FooterColumn title="Support" items={["Help Center", "FAQs", "Terms & Conditions", "Privacy Policy"]} />
-                    <FooterColumn title="Contact Us" items={["+91 98765 43210", "support@bloodconnect.com", "Pune, Maharashtra, India"]} />
-                </div>
-
-                <div className="mt-7 border-t border-gray-200 pt-2 text-center text-[9px] text-gray-500">
-                    © 2024 BloodConnect. All rights reserved.
-                </div>
-            </footer>
+            
         </div>
     );
 }

@@ -8,7 +8,7 @@ import AboutCTA from "../Components/About/AboutCTA";
 
 function About() {
   return (
-    <div className="min-h-screen bg-white text-gray-800">
+    <div className="min-h-screen bg-white text-gray-800 mt-20">
       <AboutHero />
       <MissionVision />
       <AboutStats />

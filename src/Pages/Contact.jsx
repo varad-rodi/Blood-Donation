@@ -8,7 +8,7 @@ import ContactHelp from "../components/Contact/ContactHelp";
 
 function Contact() {
   return (
-    <div className="min-h-screen bg-white text-gray-800">
+    <div className="min-h-screen bg-white text-gray-800 mt-20">
 
       <ContactHero />
 
