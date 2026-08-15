@@ -1,92 +1,107 @@
-import { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
-function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-
-    if (!email || !password) {
-      alert("Please fill all fields");
-      return;
-    }
-    console.log("Login Data:", {
-      email,
-      password,
-    });
-
-    alert("Login successful!");
-  };
-
+const Login = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#070B18] via-red-950 to-[#070B18] px-5">
-      {/* Login Card */}
-      <div className="w-full max-w-md rounded-3xl border border-white/15 bg-white/10 p-8 md:p-10 shadow-2xl backdrop-blur-xl">
-        <div className="mx-auto mb-5 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-gradient-to-br from-red-500 to-red-700 text-4xl shadow-lg shadow-red-500/30">
-          🩸
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-red-100 flex items-center justify-center px-4">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 border border-red-100">
+        <div className="text-center mb-8">
+          <div className="mx-auto w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mb-3">
+            <span className="text-3xl">🩸</span>
+          </div>
+
+          <h1 className="text-3xl font-bold text-gray-900">
+            Blood<span className="text-red-600">Connect</span>
+          </h1>
+
+          <p className="text-gray-500 text-sm mt-1">Save Blood. Save Lives.</p>
         </div>
-        <h1 className="text-center text-3xl font-bold text-white">
-          Welcome Back
-        </h1>
 
-        <p className="mt-2 text-center text-gray-400">
-          Login to your Blood Donation account
-        </p>
+        <div className="mb-6">
+          <h2 className="text-2xl font-bold text-gray-800">
+            Welcome Back Sir / Mam ...
+          </h2>
 
-        
-        <form onSubmit={handleLogin} className="mt-8">
-          
+          <p className="text-gray-500 text-sm mt-1">
+            Login to your BloodConnect account
+          </p>
+        </div>
+
+        <form className="space-y-5">
           <div>
-            <label className="mb-2 block text-sm font-medium text-white">
-              Email
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
+              Email Address
             </label>
 
             <input
               type="email"
               placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder-gray-500 outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-500/30"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:border-red-500 focus:ring-2 focus:ring-red-100"
             />
           </div>
 
-          
-          <div className="mt-5">
-            <label className="mb-2 block text-sm font-medium text-white">
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
               Password
             </label>
 
             <input
               type="password"
               placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white placeholder-gray-500 outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-500/30"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:border-red-500 focus:ring-2 focus:ring-red-100"
             />
           </div>
 
-          
+          <div>
+            <label className="block text-sm font-semibold text-gray-700 mb-3">
+              Login As
+            </label>
+
+            <div className="flex gap-6">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="role"
+                  value="user"
+                  defaultChecked
+                  className="w-4 h-4 accent-red-600"
+                />
+
+                <span className="text-gray-700">User</span>
+              </label>
+
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="radio"
+                  name="role"
+                  value="admin"
+                  className="w-4 h-4 accent-red-600"
+                />
+
+                <span className="text-gray-700">Admin</span>
+              </label>
+            </div>
+          </div>
+
           <button
             type="submit"
-            className="mt-7 w-full rounded-xl bg-gradient-to-r from-red-500 to-orange-500 py-3.5 font-semibold text-white shadow-lg shadow-red-500/20 transition duration-300 hover:scale-[1.02] hover:from-red-600 hover:to-orange-600 active:scale-[0.98]"
+            className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-lg transition duration-300 shadow-md"
           >
             Login
           </button>
         </form>
 
-       
-        <p className="mt-6 text-center text-gray-400">
-          Don't have an account !{" "}
-          <a
-            href="/register"
-            className="font-semibold text-red-400 transition hover:text-red-300"
+        <p className="text-center text-gray-500 text-sm mt-6">
+          Don't have an account Sir / Mam .{" "}
+          <Link
+            to="/register"
+            className="text-red-600 font-semibold hover:underline"
           >
             Register
-          </a>
+          </Link>
         </p>
       </div>
     </div>
   );
-}
+};
 export default Login;
