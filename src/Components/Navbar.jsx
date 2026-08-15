@@ -1,19 +1,25 @@
+
 import { NavLink } from "react-router-dom";
- 
 import navbarBg from "../assets/navbarbg.png";
+import { FaDroplet } from "react-icons/fa6";
 
 function Navbar() {
   return (
     <nav
-      className="w-full bg-cover bg-center bg-no-repeat shadow-xl"
+      className="w-full bg-cover bg-center bg-no-repeat shadow-xl sticky top-0 z-50"
       style={{ backgroundImage: `url(${navbarBg})` }}
     >
       <div className="bg-white/85 backdrop-blur-md">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
+          
+          {/* Logo */}
+          <div className="flex items-center space-x-2">
+            <NavLink to="/" className="text-red-600 text-2xl font-bold flex items-center gap-2">
+              <FaDroplet /> LifeDrop
+            </NavLink>
+          </div>
 
-         
-           
- 
+          {/* Navigation Links */}
           <ul className="hidden md:flex gap-10">
             <li>
               <NavLink
@@ -62,7 +68,7 @@ function Navbar() {
 
             <li>
               <NavLink
-                to="/contact"
+                to="/Contact"
                 className={({ isActive }) =>
                   `font-semibold transition duration-300 ${
                     isActive
@@ -76,8 +82,8 @@ function Navbar() {
             </li>
           </ul>
 
-           
-          <div className="flex gap-4">
+          {/* Action Buttons */}
+          <div className="flex gap-4 items-center">
             <NavLink to="/donate">
               <button className="px-6 py-2 rounded-xl bg-red-600 text-white font-semibold shadow-lg hover:bg-red-700 hover:scale-105 transition duration-300">
                 Donate Now
