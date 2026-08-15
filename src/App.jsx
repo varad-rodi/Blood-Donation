@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+
 import FindDonors from "./Pages/FindDonors";
 import RequestBlood from "./Pages/RequestBlood";
 import Hospitals from "./Pages/Hospitals";
@@ -12,9 +13,14 @@ import Navbar from "./Common/Navbar";
 import Footer from "./Common/Footer";
 
 function App() {
+  const location = useLocation();
+  const hideLayout =
+    location.pathname === "/login" ||
+    location.pathname === "/register";
+
   return (
     <>
-      <Navbar />
+      {!hideLayout && <Navbar />}
 
       <Routes>
         {/* Main Pages */}
@@ -32,7 +38,7 @@ function App() {
         <Route path="/register" element={<Register />} />
       </Routes>
 
-      <Footer />
+      {!hideLayout && <Footer />}
     </>
   );
 }
