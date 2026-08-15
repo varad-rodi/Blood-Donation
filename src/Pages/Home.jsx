@@ -43,7 +43,7 @@ const Home = () => {
           {/* Left Content */}
           <div>
             <span className="inline-block px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-sm mb-6 animate-pulse">
-              🩸 Every Drop Can Save a Life
+               Every Drop Can Save a Life 🩸
             </span>
 
             <h2 className="text-5xl md:text-7xl font-bold leading-tight">
@@ -63,13 +63,13 @@ const Home = () => {
                 to="/register"
                 className="bg-red-600 hover:bg-red-700 px-7 py-3.5 rounded-xl font-semibold transition shadow-lg shadow-red-600/20"
               >
-                🩸 Donate Blood
+                Donate Blood 🩸
               </Link>
               <Link
                 to="/requests"
                 className="border border-white/15 hover:bg-white/5 px-7 py-3.5 rounded-xl font-semibold transition"
               >
-                Need Blood?
+                Need Blood !
               </Link>
             </div>
           </div>

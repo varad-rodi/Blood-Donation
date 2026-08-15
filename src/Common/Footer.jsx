@@ -68,15 +68,23 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-red-500 shrink-0" />
-              <span>Baner, Pune, Maharashtra</span>
+              <span>Government Polytechnic Ambad and Gondia</span>
             </li>
             <li className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-red-500 shrink-0" />
-              <a href="tel:+919876543210" className="hover:text-red-400 transition-colors">+91 98765 43210</a>
+              
+              <a href="tel:+919876543210 " className="hover:text-red-400 transition-colors">+91 87679 56920</a>
+              <a href="tel :+919421343413" className="hover:text-red-400 transition-colors">+91 94213 43413</a>
+              <a href="tel :+919421343413" className="hover:text-red-400 transition-colors">+91 92262 52325</a>
+              <a href="tel :+919421343413" className="hover:text-red-400 transition-colors">+91 95524 83396</a>
+              <a href="tel :+919421343413" className="hover:text-red-400 transition-colors">+91 89995 40391</a>
+
+            
+
             </li>
             <li className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-red-500 shrink-0" />
-              <a href="mailto:support@bloodcare.com" className="hover:text-red-400 transition-colors">support@bloodcare.com</a>
+              <a href="codecrafters05@gmail.com" className="hover:text-red-400 transition-colors">codecrafters05@gmail.com</a>
             </li>
           </ul>
         </div>
@@ -86,7 +94,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium tracking-wide">
         <p>© {new Date().getFullYear()} BloodCare. All rights reserved.</p>
         <p className="flex items-center gap-1">
-          Made with <Heart className="w-3.5 h-3.5 text-red-500 fill-current animate-pulse" /> for a better community.
+          Made with  for a better community <Heart className="w-3.5 h-3.5 text-red-500 fill-current animate-pulse" />
         </p>
       </div>
     </footer>
