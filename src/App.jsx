@@ -5,8 +5,8 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Department from './Pages/Department';
 
-import Navbar from './Common/Navbar';
-import Footer from './Common/Footer';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 
 
 function App() {

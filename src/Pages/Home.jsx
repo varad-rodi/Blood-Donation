@@ -1,10 +1,17 @@
 import React from 'react'
-
+import Hero from '../Components/Home/Hero'
+import WhyDonate from '../Components/Home/WhyDonate'
+ 
 const Home = () => {
   return (
-    <section className='bg-black min-h-screen text-9xl text-white'>
-    <div>Home</div>
-    </section>
+    
+    <>
+    <Hero/>
+    <WhyDonate/>
+ 
+    </> 
+     
+     
   )
 }
 
