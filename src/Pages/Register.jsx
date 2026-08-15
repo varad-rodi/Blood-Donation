@@ -27,7 +27,7 @@ function Register() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#070B18] via-red-950 to-[#070B18] px-5 py-10">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#070B18] via-red-950 to-[#070B18] px-5 py-10 pt-40">
       <div className="w-full max-w-md rounded-3xl border border-white/15 bg-white/10 p-8 md:p-10 shadow-2xl backdrop-blur-xl">
         <div className="mx-auto mb-5 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-gradient-to-br from-red-500 to-red-700 text-4xl shadow-lg shadow-red-500/30">
           🩸
