@@ -167,7 +167,8 @@ const Contact = () => {
     if (formData.name && formData.email && formData.message) {
       setSubmitted(true);
       setTimeout(() => {
-        setSubmitted(false);
+          setSubmitted(false);
+      
         setFormData({ name: '', email: '', subject: '', message: '' });
       }, 3000);
     }
